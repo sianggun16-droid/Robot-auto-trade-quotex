@@ -2,7 +2,7 @@ import asyncio
 import datetime
 import os
 import pandas as pd
-from quotexpy.new import Quotex
+from quotexpy import Quotex
 import requests
 
 EMAIL_QUOTEX = os.getenv("EMAIL_QUOTEX", "Anggunyana1627@gmail.com")
