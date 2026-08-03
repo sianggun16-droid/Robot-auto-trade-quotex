@@ -18,11 +18,13 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Install Google Chrome
+      uses: browser-actions/setup-chrome@v1
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install quotexpy pandas requests cloudscraper beautifulsoup4 websockets certifi fake-useragent playwright
-        playwright install
+        pip install -r requirements.txt
 
     - name: Run Bot Quotex
       env:
